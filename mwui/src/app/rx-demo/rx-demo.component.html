@@ -1,0 +1,10 @@
+<!-- <li *ngFor="let todo of todoList">{{todo.title}}</li> -->
+
+<div>
+  <input placeholder="Search words" #searchBox />
+  <ng-template class="suggest-container" [ngIf]="showSuggestion">
+    <li class="suggest-entry" *ngFor="let term of suggestions" (click)="selectSuggestion(term)">
+      {{ term }}
+    </li>
+  </ng-template>
+</div>

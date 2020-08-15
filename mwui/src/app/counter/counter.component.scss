@@ -1,0 +1,11 @@
+div.content{
+    padding: 0.5rem;
+    cursor: pointer;
+    user-select:none;
+    transition: .2s ease-in-out;
+    margin: 0.5rem 1rem;
+
+    .over-clicked{
+        color: red;
+    }
+}

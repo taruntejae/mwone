@@ -1,0 +1,38 @@
+GET http://localhost:3000/api/UserService
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InNraWxscyI6WyJSZWFjdCIsIk5vZGVqcyIsIkphdmFTY3JpcHQiXSwiX2lkIjoiNWU1NWZmMjU0YjM5YmEyMzhkNmEyNDJjIiwidXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJwYXNzd29yZCI6IiQyYiQxMCRNQmRzcHNiYzNxbW16Q1BROC9zbTB1NEl5S2hyLzNlUnEyemFnd2JOUXdLT2kwdWFPeHFqaSIsImFkZHJlc3MiOnsiY2l0eSI6IkJlbmdhbHVydSIsImNvdW50cnkiOiJJbmRpYSJ9LCJjcmVhdGVkT24iOiIyMDIwLTAyLTI2VDA1OjE2OjIxLjg4NVoiLCJfX3YiOjB9LCJpYXQiOjE1ODI2OTU2NDQsImV4cCI6MTU4MjY5OTI0NH0.Q72fyrCwQsp8SfQ-FV1fcFE0FFqoXSGHZYtJkPsejco
+
+###
+GET http://localhost:3000/api/UserService/testuser1
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjp7InNraWxscyI6WyJSZWFjdCIsIk5vZGVqcyIsIkphdmFTY3JpcHQiXSwiX2lkIjoiNWU1NWZmMjU0YjM5YmEyMzhkNmEyNDJjIiwidXNlcm5hbWUiOiJ0ZXN0dXNlcjEiLCJwYXNzd29yZCI6IiQyYiQxMCRNQmRzcHNiYzNxbW16Q1BROC9zbTB1NEl5S2hyLzNlUnEyemFnd2JOUXdLT2kwdWFPeHFqaSIsImFkZHJlc3MiOnsiY2l0eSI6IkJlbmdhbHVydSIsImNvdW50cnkiOiJJbmRpYSJ9LCJjcmVhdGVkT24iOiIyMDIwLTAyLTI2VDA1OjE2OjIxLjg4NVoiLCJfX3YiOjB9LCJpYXQiOjE1ODI2OTU2NDQsImV4cCI6MTU4MjY5OTI0NH0.Q72fyrCwQsp8SfQ-FV1fcFE0FFqoXSGHZYtJkPsejco
+
+###
+POST http://localhost:3000/api/UserService
+Content-Type: application/json
+
+{
+    "username": "testuser1",
+    "password": "password",
+    "skills": ["React", "Nodejs", "JavaScript"],
+    "address": {
+        "city": "Bengaluru",
+        "country": "India"
+    }
+}
+
+###
+DELETE http://localhost:3000/api/UserService
+Content-Type: application/json
+
+{
+    "username": "testuser1"
+}
+
+
+###
+POST http://localhost:3000/api/UserService/login
+Content-Type: application/json
+
+{
+    "username": "testuser1",
+    "password": "password"
+}

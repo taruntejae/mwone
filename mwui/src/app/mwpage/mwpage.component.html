@@ -1,0 +1,60 @@
+<ng-container *ngIf="currentPageNum == 0">
+  <div class="container" *ngIf="showLogin">
+    <form [formGroup]="loginForm" (ngSubmit)="formSubmit()">
+      <input formControlName="username" placeholder="Username">
+      <input formControlName="password" type="password" placeholder="Password">
+      <button type="submit" [disabled]="loginForm.invalid">Submit</button>
+      <button (click)="showLogin = !showLogin">Toggle Form</button>
+    </form>
+  </div>
+  <div class="container" *ngIf="!showLogin">
+    <form [formGroup]="registerForm" (ngSubmit)="formSubmit()">
+      <input formControlName="username" placeholder="Username">
+      <input formControlName="password" type="password" placeholder="Password">
+      <div formGroupName="address">
+        <select formControlName="city">
+          <option value="">--City--</option>
+          <option value="hyderabad">Hyderabad</option>
+          <option value="bengaluru">Bengaluru</option>
+          <option value="chennai">Chennai</option>
+        </select>
+        <select formControlName="country">
+          <option value="">--Country--</option>
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+        </select>
+      </div>
+      <button type="submit" [disabled]="registerForm.invalid">Submit</button>
+      <button (click)="showLogin = !showLogin">Toggle Form</button>
+    </form>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="currentPageNum == 1">
+  <div>
+    <p>Home page</p>
+    <p>Logout <button (click)="doLogout()">Logout</button></p>
+    <button (click)="ping()">PING</button>
+    <br >
+    <div class="container" *ngIf="showLogin">
+      <form [formGroup]="todoForm" (ngSubmit)="createTodo()">
+        <input formControlName="title" placeholder="Todo Title">
+        <button type="submit" [disabled]="todoForm.invalid">Creat todo</button>
+      </form>
+    </div>
+    <br>
+    <button (click)="getTodos()">Get Todos</button>
+    <ul *ngIf="todos && todos.length > 0">
+      <li *ngFor="let todo of todos">
+        <div class="todo-card">
+          <div class="todo-title">{{ todo.title}}</div>
+          <div class="todo-time">{{ todo.createdAt | date:"dd/MM/yy - HH:mm:ss"}}</div>
+          <div class="todo-status">
+            {{ todo.completed }}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ng-container>

@@ -1,0 +1,15 @@
+GET http://localhost:3000/api/PostService
+
+###
+
+POST http://localhost:3000/api/PostService
+Content-Type: application/json
+
+{
+    "title": "new Init",
+    "username": "testuser1"
+}
+
+###
+
+GET http://localhost:3000/api/PostService/5e589a44fdadbc3a112b1eb5

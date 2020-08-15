@@ -1,0 +1,63 @@
+.container {
+  width: 500px;
+  margin: 0 auto;
+  border: 1px solid;
+  box-shadow: 1px 1px 1px grey;
+  padding: 1rem;
+  height: auto;
+  transition: ease-in-out 0.5s;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: auto;
+
+  div.select {
+    margin: 0.5rem;
+  }
+
+  input,
+  button,
+  select {
+    margin: 0.5rem;
+  }
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+li{
+    list-style: none;
+}
+.todo-card {
+    display: inline-block;
+    width: 20rem;
+    margin: 1rem;
+    border: 1px solid;
+    border-radius: 4px;
+    padding: 0.5rem;
+    *{
+        padding: 0.5rem;
+    }
+
+  .todo-title {
+    display: block;
+    background: rgba(128, 128, 128, 0.345);
+  }
+
+  .todo-time {
+    display: block;
+    background: rgba(255, 0, 0, 0.29);
+  }
+
+  .todo-status {
+    display: block;
+
+  }
+}

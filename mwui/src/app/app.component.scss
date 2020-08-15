@@ -1,0 +1,17 @@
+.app-content {
+  display: inline-block;
+  margin: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.inactive{
+  color: grey;
+}
+
+.children{
+  border: 1px solid;
+  display: block;
+
+  margin: 1rem;
+}

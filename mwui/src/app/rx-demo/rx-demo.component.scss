@@ -1,0 +1,29 @@
+*{
+    font-family: 'verdana' !important;
+}
+div{
+    display: inline-block;
+}
+input{
+    width: 150px;
+}
+li{
+    list-style: none;
+    padding: 0 0.2rem;  
+    border: 1px solid;
+    border-bottom: 0;
+    border-top: 0;
+    
+    &:last-child{
+        border: 1px solid;
+        border-top: 0;
+    }
+
+    &:hover{
+        cursor: pointer;
+        background: rgba(128, 128, 128, 0.399);
+    }
+    &:active{
+        background-color: rgba(128, 128, 128, 0.399);
+    }
+}
